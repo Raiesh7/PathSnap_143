@@ -1,0 +1,83 @@
+{
+  "completed_trials": 20,
+  "best_trial": 9,
+  "best_params": {
+    "n_estimators": 200,
+    "learning_rate": 0.033001987366710776,
+    "num_leaves": 90,
+    "min_child_samples": 79,
+    "subsample": 0.7026156761667853,
+    "colsample_bytree": 0.6630687540094391,
+    "reg_alpha": 4.640941154499611,
+    "reg_lambda": 2.03545223747143
+  },
+  "baseline_cv_f1": 0.9285180518765419,
+  "best_cv_f1": 0.9299200547070712,
+  "resumed": false,
+  "current_invocation_runtime_s": 891.975472099999,
+  "total_trial_runtime_s": 864.9341683999974,
+  "train_trips": 80,
+  "train_candidate_rows": 1058904,
+  "student_test_label_valid_observations": 19133,
+  "student_test_total_observations": 19160,
+  "student_testing_used_for_search": false,
+  "artifact_reload_verified": true,
+  "machine": "ChatreshGudi_PC",
+  "python": "3.13.3",
+  "git_commit": "dad1dbd735dc295d18ab283a50c252277beb2af0",
+  "tuned_artifact_sha256": "58a49433386a89b811ee62ef3da865a1aecaf661d9689673549b34eddf7e4194",
+  "results": {
+    "untuned": {
+      "accuracy": 0.9637109553826109,
+      "precision_macro": 0.9389986845936156,
+      "recall_macro": 0.9300197172610354,
+      "f1_macro": 0.9344319050679858,
+      "f1_positive": 0.890616707355907,
+      "log_loss": 0.0959228249297838,
+      "confusion": [
+        [
+          92685,
+          1818
+        ],
+        [
+          2304,
+          16781
+        ]
+      ],
+      "top1_accuracy": 0.8967752051429467,
+      "candidate_miss_rate": 0.0025087545079182094,
+      "top1_accuracy_when_covered": 0.8990306523447734,
+      "route_continuity": 0.9460663556790189,
+      "inference_s": 0.7051769999998214,
+      "inference_ms_per_1000_obs": 36.856582867288004,
+      "fit_s_full": 9.444919900000968,
+      "train_rows_full": 1058904
+    },
+    "tuned": {
+      "accuracy": 0.962267140895165,
+      "precision_macro": 0.9358730559430385,
+      "recall_macro": 0.9280648170459362,
+      "f1_macro": 0.9319099972965745,
+      "f1_positive": 0.8864455277660025,
+      "log_loss": 0.09841763227385614,
+      "confusion": [
+        [
+          92573,
+          1930
+        ],
+        [
+          2356,
+          16729
+        ]
+      ],
+      "top1_accuracy": 0.8889876130246172,
+      "candidate_miss_rate": 0.0025087545079182094,
+      "top1_accuracy_when_covered": 0.8912234739324076,
+      "route_continuity": 0.944756014466167,
+      "inference_s": 0.4304940000001807,
+      "inference_ms_per_1000_obs": 22.500078398587817,
+      "fit_s_full": 7.011135499999,
+      "train_rows_full": 1058904
+    }
+  }
+}

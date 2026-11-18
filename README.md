@@ -59,3 +59,19 @@ trip = preprocess_trip(load_trip(Path("data/Student folder/train/00000001"), "tr
 print(trip.observations.head())
 ```
 
+## LightGBM Bayesian hyperparameter tuning
+
+After the candidate tables and shared five-fold assignment have been generated:
+
+```powershell
+python experiments/03_bayesian_optimization.py --trials 20 --n-jobs 4
+```
+
+The Optuna TPE search selects parameters using training-trip cross-validation
+Macro F1 only, then compares the tuned model with the untuned configuration on
+student testing. It preserves the five-model baseline outputs. Results and the
+search history are saved in `results/tuning/lightgbm/`; the tuned model is saved
+as `artifacts/models/lightgbm_tuned.joblib`. Use `--resume` to continue an existing
+study with matching inputs and configuration. See
+[report/hyperparameter_tuning.md](report/hyperparameter_tuning.md) for methodology.
+

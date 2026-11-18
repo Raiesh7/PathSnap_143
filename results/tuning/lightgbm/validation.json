@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "completed_trials": 20,
+  "fold_evaluations": 100,
+  "trial_scores_match_fold_means": true,
+  "input_and_code_hashes_match": true,
+  "model_parameters_match_selected_trial": true,
+  "all_saved_probabilities_reproduced": true,
+  "recomputed_f1_log_loss_and_top1_match": true,
+  "student_test_prediction_rows": 113588,
+  "best_trial_zero_based": 9
+}

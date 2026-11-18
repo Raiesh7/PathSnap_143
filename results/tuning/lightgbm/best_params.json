@@ -1,0 +1,15 @@
+{
+  "trial": 9,
+  "value": 0.9299200547070712,
+  "params": {
+    "n_estimators": 200,
+    "learning_rate": 0.033001987366710776,
+    "num_leaves": 90,
+    "min_child_samples": 79,
+    "subsample": 0.7026156761667853,
+    "colsample_bytree": 0.6630687540094391,
+    "reg_alpha": 4.640941154499611,
+    "reg_lambda": 2.03545223747143
+  },
+  "objective": "mean five-fold candidate binary Macro F1 at threshold 0.5"
+}

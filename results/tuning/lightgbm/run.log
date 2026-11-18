@@ -1,0 +1,331 @@
+[I 2026-11-18 12:50:36,526] A new study created in RDB with name: lightgbm_trip_grouped_macro_f1
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 1/20, fold 1/5: F1=0.91964, Top1=0.87096, fit=6.5s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 1/20, fold 2/5: F1=0.93097, Top1=0.89267, fit=6.4s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 1/20, fold 3/5: F1=0.90327, Top1=0.83211, fit=6.7s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 1/20, fold 4/5: F1=0.94848, Top1=0.91493, fit=7.3s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 1/20, fold 5/5: F1=0.94022, Top1=0.90685, fit=7.4s
+[I 2026-11-18 12:51:18,085] Trial 0 finished with value: 0.9285180518765419 and parameters: {'n_estimators': 400, 'learning_rate': 0.05, 'num_leaves': 63, 'min_child_samples': 50, 'subsample': 0.8, 'colsample_bytree': 0.8, 'reg_alpha': 0.0, 'reg_lambda': 0.0}. Best is trial 0 with value: 0.9285180518765419.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 2/20, fold 1/5: F1=0.91735, Top1=0.86892, fit=9.0s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 2/20, fold 2/5: F1=0.92916, Top1=0.89174, fit=8.8s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 2/20, fold 3/5: F1=0.90108, Top1=0.82874, fit=8.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 2/20, fold 4/5: F1=0.94763, Top1=0.91408, fit=9.0s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 2/20, fold 5/5: F1=0.94098, Top1=0.90663, fit=9.0s
+[I 2026-11-18 12:52:13,546] Trial 1 finished with value: 0.9272406928661681 and parameters: {'n_estimators': 400, 'learning_rate': 0.1358198535217987, 'num_leaves': 74, 'min_child_samples': 90, 'subsample': 0.6624074561769746, 'colsample_bytree': 0.662397808134481, 'reg_alpha': 0.2904180608409973, 'reg_lambda': 8.661761457749352}. Best is trial 0 with value: 0.9285180518765419.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 3/20, fold 1/5: F1=0.92133, Top1=0.87373, fit=7.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 3/20, fold 2/5: F1=0.93233, Top1=0.89570, fit=7.3s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 3/20, fold 3/5: F1=0.90446, Top1=0.83269, fit=7.2s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 3/20, fold 4/5: F1=0.94803, Top1=0.91351, fit=7.3s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 3/20, fold 5/5: F1=0.93978, Top1=0.90411, fit=7.3s
+[I 2026-11-18 12:52:57,398] Trial 2 finished with value: 0.929185621984437 and parameters: {'n_estimators': 500, 'learning_rate': 0.08329844231669226, 'num_leaves': 16, 'min_child_samples': 232, 'subsample': 0.9329770563201687, 'colsample_bytree': 0.6849356442713105, 'reg_alpha': 0.9091248360355031, 'reg_lambda': 1.8340450985343382}. Best is trial 2 with value: 0.929185621984437.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 4/20, fold 1/5: F1=0.92057, Top1=0.87237, fit=6.7s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 4/20, fold 2/5: F1=0.93304, Top1=0.89685, fit=6.5s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 4/20, fold 3/5: F1=0.90386, Top1=0.83214, fit=6.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 4/20, fold 4/5: F1=0.94865, Top1=0.91469, fit=6.3s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 4/20, fold 5/5: F1=0.94020, Top1=0.90630, fit=6.3s
+[I 2026-11-18 12:53:36,950] Trial 3 finished with value: 0.929263826946588 and parameters: {'n_estimators': 300, 'learning_rate': 0.05757368425309993, 'num_leaves': 49, 'min_child_samples': 41, 'subsample': 0.8447411578889518, 'colsample_bytree': 0.6557975442608167, 'reg_alpha': 1.4607232426760908, 'reg_lambda': 3.663618432936917}. Best is trial 3 with value: 0.929263826946588.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 5/20, fold 1/5: F1=0.92030, Top1=0.87183, fit=7.4s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 5/20, fold 2/5: F1=0.92861, Top1=0.89122, fit=7.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 5/20, fold 3/5: F1=0.90259, Top1=0.83224, fit=7.5s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 5/20, fold 4/5: F1=0.94833, Top1=0.91405, fit=7.6s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 5/20, fold 5/5: F1=0.93999, Top1=0.90653, fit=8.2s
+[I 2026-11-18 12:54:22,822] Trial 4 finished with value: 0.9279643854524388 and parameters: {'n_estimators': 400, 'learning_rate': 0.09729870597990298, 'num_leaves': 31, 'min_child_samples': 72, 'subsample': 0.836965827544817, 'colsample_bytree': 0.6185801650879991, 'reg_alpha': 3.0377242595071916, 'reg_lambda': 1.7052412368729153}. Best is trial 3 with value: 0.929263826946588.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 6/20, fold 1/5: F1=0.92119, Top1=0.87291, fit=5.0s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 6/20, fold 2/5: F1=0.93514, Top1=0.89944, fit=5.0s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 6/20, fold 3/5: F1=0.90415, Top1=0.83177, fit=4.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 6/20, fold 4/5: F1=0.94759, Top1=0.91302, fit=4.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 6/20, fold 5/5: F1=0.93845, Top1=0.90139, fit=5.0s
+[I 2026-11-18 12:54:52,514] Trial 5 finished with value: 0.9293041297576256 and parameters: {'n_estimators': 200, 'learning_rate': 0.03694703633320588, 'num_leaves': 41, 'min_child_samples': 42, 'subsample': 0.6053228648472733, 'colsample_bytree': 0.6344209957731518, 'reg_alpha': 3.542639323310911, 'reg_lambda': 1.1378413576095334}. Best is trial 5 with value: 0.9293041297576256.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 7/20, fold 1/5: F1=0.92155, Top1=0.87256, fit=5.4s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 7/20, fold 2/5: F1=0.93392, Top1=0.89717, fit=5.2s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 7/20, fold 3/5: F1=0.90432, Top1=0.83098, fit=5.5s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 7/20, fold 4/5: F1=0.94723, Top1=0.91339, fit=5.5s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 7/20, fold 5/5: F1=0.93836, Top1=0.90230, fit=5.4s
+[I 2026-11-18 12:55:24,927] Trial 6 finished with value: 0.9290748096853398 and parameters: {'n_estimators': 300, 'learning_rate': 0.03998365485017148, 'num_leaves': 20, 'min_child_samples': 65, 'subsample': 0.7549622185191215, 'colsample_bytree': 0.8038308777994398, 'reg_alpha': 4.137372331750571, 'reg_lambda': 4.485549053630676}. Best is trial 5 with value: 0.9293041297576256.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 8/20, fold 1/5: F1=0.92026, Top1=0.87178, fit=9.3s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 8/20, fold 2/5: F1=0.93108, Top1=0.89410, fit=10.2s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 8/20, fold 3/5: F1=0.90412, Top1=0.83224, fit=9.4s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 8/20, fold 4/5: F1=0.94846, Top1=0.91584, fit=10.0s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 8/20, fold 5/5: F1=0.94014, Top1=0.90592, fit=10.6s
+[I 2026-11-18 12:56:24,257] Trial 7 finished with value: 0.9288112142379905 and parameters: {'n_estimators': 400, 'learning_rate': 0.07319841380640649, 'num_leaves': 44, 'min_child_samples': 148, 'subsample': 0.6411297990418873, 'colsample_bytree': 0.6256697984949849, 'reg_alpha': 3.4810627747635046, 'reg_lambda': 1.6118883400582948}. Best is trial 5 with value: 0.9293041297576256.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 9/20, fold 1/5: F1=0.92162, Top1=0.87265, fit=7.3s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 9/20, fold 2/5: F1=0.93424, Top1=0.89794, fit=7.4s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 9/20, fold 3/5: F1=0.90400, Top1=0.83074, fit=7.0s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 9/20, fold 4/5: F1=0.94736, Top1=0.91311, fit=7.1s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 9/20, fold 5/5: F1=0.93861, Top1=0.90178, fit=7.2s
+[I 2026-11-18 12:57:07,172] Trial 8 finished with value: 0.9291663240948915 and parameters: {'n_estimators': 400, 'learning_rate': 0.026812999357128924, 'num_leaves': 23, 'min_child_samples': 23, 'subsample': 0.6612563879963729, 'colsample_bytree': 0.7441533640064746, 'reg_alpha': 0.13042432149811223, 'reg_lambda': 0.47989376298328823}. Best is trial 5 with value: 0.9293041297576256.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 10/20, fold 1/5: F1=0.92213, Top1=0.87342, fit=5.8s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 10/20, fold 2/5: F1=0.93532, Top1=0.89927, fit=5.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 10/20, fold 3/5: F1=0.90418, Top1=0.83108, fit=5.6s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 10/20, fold 4/5: F1=0.94855, Top1=0.91421, fit=5.5s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 10/20, fold 5/5: F1=0.93941, Top1=0.90456, fit=5.5s
+[I 2026-11-18 12:57:41,106] Trial 9 finished with value: 0.9299200547070712 and parameters: {'n_estimators': 200, 'learning_rate': 0.033001987366710776, 'num_leaves': 90, 'min_child_samples': 79, 'subsample': 0.7026156761667853, 'colsample_bytree': 0.6630687540094391, 'reg_alpha': 4.640941154499611, 'reg_lambda': 2.03545223747143}. Best is trial 9 with value: 0.9299200547070712.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 11/20, fold 1/5: F1=0.92091, Top1=0.87211, fit=5.1s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 11/20, fold 2/5: F1=0.93301, Top1=0.89663, fit=5.1s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 11/20, fold 3/5: F1=0.90235, Top1=0.82858, fit=4.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 11/20, fold 4/5: F1=0.94869, Top1=0.91527, fit=5.0s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 11/20, fold 5/5: F1=0.94065, Top1=0.90666, fit=5.1s
+[I 2026-11-18 12:58:12,208] Trial 10 finished with value: 0.9291215185678544 and parameters: {'n_estimators': 200, 'learning_rate': 0.0698304069199537, 'num_leaves': 74, 'min_child_samples': 157, 'subsample': 0.6325560664663095, 'colsample_bytree': 0.6936309217053949, 'reg_alpha': 4.862015852463016, 'reg_lambda': 2.762880367196521}. Best is trial 9 with value: 0.9299200547070712.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 12/20, fold 1/5: F1=0.92094, Top1=0.87197, fit=4.4s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 12/20, fold 2/5: F1=0.93524, Top1=0.90015, fit=4.5s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 12/20, fold 3/5: F1=0.90368, Top1=0.83077, fit=4.4s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 12/20, fold 4/5: F1=0.94670, Top1=0.91208, fit=4.3s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 12/20, fold 5/5: F1=0.93791, Top1=0.90062, fit=4.4s
+[I 2026-11-18 12:58:38,413] Trial 11 finished with value: 0.9288955114225453 and parameters: {'n_estimators': 200, 'learning_rate': 0.04234710209888038, 'num_leaves': 20, 'min_child_samples': 39, 'subsample': 0.7289614221007567, 'colsample_bytree': 0.6067540448729861, 'reg_alpha': 4.337043934463764, 'reg_lambda': 0.039533996871564225}. Best is trial 9 with value: 0.9299200547070712.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 13/20, fold 1/5: F1=0.92145, Top1=0.87349, fit=6.7s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 13/20, fold 2/5: F1=0.93363, Top1=0.89727, fit=7.3s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 13/20, fold 3/5: F1=0.90431, Top1=0.83256, fit=6.5s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 13/20, fold 4/5: F1=0.94789, Top1=0.91399, fit=6.5s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 13/20, fold 5/5: F1=0.93952, Top1=0.90430, fit=7.2s
+[I 2026-11-18 12:59:19,559] Trial 12 finished with value: 0.9293581084491749 and parameters: {'n_estimators': 300, 'learning_rate': 0.03502556191796689, 'num_leaves': 41, 'min_child_samples': 47, 'subsample': 0.6081408003873172, 'colsample_bytree': 0.6665891736932612, 'reg_alpha': 3.078681842656275, 'reg_lambda': 1.8790561815429965}. Best is trial 9 with value: 0.9299200547070712.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 14/20, fold 1/5: F1=0.92052, Top1=0.87181, fit=7.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 14/20, fold 2/5: F1=0.93380, Top1=0.89772, fit=7.8s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 14/20, fold 3/5: F1=0.90325, Top1=0.83103, fit=7.7s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 14/20, fold 4/5: F1=0.94891, Top1=0.91496, fit=7.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 14/20, fold 5/5: F1=0.94058, Top1=0.90672, fit=7.8s
+[I 2026-11-18 13:00:07,237] Trial 13 finished with value: 0.9294116638359778 and parameters: {'n_estimators': 300, 'learning_rate': 0.04707844820744299, 'num_leaves': 88, 'min_child_samples': 78, 'subsample': 0.7402786148775258, 'colsample_bytree': 0.6784854703794236, 'reg_alpha': 4.942140804360388, 'reg_lambda': 1.9476566766283145}. Best is trial 9 with value: 0.9299200547070712.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 15/20, fold 1/5: F1=0.92181, Top1=0.87387, fit=8.1s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 15/20, fold 2/5: F1=0.93409, Top1=0.89816, fit=8.3s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 15/20, fold 3/5: F1=0.90360, Top1=0.83164, fit=8.2s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 15/20, fold 4/5: F1=0.94865, Top1=0.91448, fit=7.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 15/20, fold 5/5: F1=0.93984, Top1=0.90449, fit=8.0s
+[I 2026-11-18 13:00:55,576] Trial 14 finished with value: 0.9295981991288084 and parameters: {'n_estimators': 300, 'learning_rate': 0.024953704079981147, 'num_leaves': 92, 'min_child_samples': 61, 'subsample': 0.687785535988362, 'colsample_bytree': 0.7051262834517608, 'reg_alpha': 4.8474316028401825, 'reg_lambda': 0.08256627669947214}. Best is trial 9 with value: 0.9299200547070712.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 16/20, fold 1/5: F1=0.92117, Top1=0.87246, fit=7.4s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 16/20, fold 2/5: F1=0.93405, Top1=0.89777, fit=7.5s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 16/20, fold 3/5: F1=0.90383, Top1=0.83216, fit=7.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 16/20, fold 4/5: F1=0.94850, Top1=0.91448, fit=8.0s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 16/20, fold 5/5: F1=0.94004, Top1=0.90508, fit=7.6s
+[I 2026-11-18 13:01:41,409] Trial 15 finished with value: 0.9295178671591919 and parameters: {'n_estimators': 300, 'learning_rate': 0.029487854259428865, 'num_leaves': 82, 'min_child_samples': 136, 'subsample': 0.7066731209287355, 'colsample_bytree': 0.8180181252921277, 'reg_alpha': 4.910900344859611, 'reg_lambda': 0.0692215673897556}. Best is trial 9 with value: 0.9299200547070712.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 17/20, fold 1/5: F1=0.92229, Top1=0.87438, fit=8.1s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 17/20, fold 2/5: F1=0.93456, Top1=0.89880, fit=8.6s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 17/20, fold 3/5: F1=0.90393, Top1=0.83164, fit=7.7s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 17/20, fold 4/5: F1=0.94859, Top1=0.91430, fit=8.1s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 17/20, fold 5/5: F1=0.93976, Top1=0.90491, fit=8.0s
+[I 2026-11-18 13:02:29,475] Trial 16 finished with value: 0.9298253529412623 and parameters: {'n_estimators': 300, 'learning_rate': 0.022193302813817376, 'num_leaves': 95, 'min_child_samples': 43, 'subsample': 0.6922428272147902, 'colsample_bytree': 0.7039996438159486, 'reg_alpha': 3.6261432720798252, 'reg_lambda': 0.24982957454504545}. Best is trial 9 with value: 0.9299200547070712.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 18/20, fold 1/5: F1=0.92198, Top1=0.87417, fit=8.1s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 18/20, fold 2/5: F1=0.93463, Top1=0.89838, fit=7.6s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 18/20, fold 3/5: F1=0.90375, Top1=0.83151, fit=7.6s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 18/20, fold 4/5: F1=0.94830, Top1=0.91433, fit=7.5s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 18/20, fold 5/5: F1=0.93971, Top1=0.90443, fit=7.6s
+[I 2026-11-18 13:03:15,223] Trial 17 finished with value: 0.929672825975534 and parameters: {'n_estimators': 300, 'learning_rate': 0.024939123589142614, 'num_leaves': 76, 'min_child_samples': 55, 'subsample': 0.8092145549732711, 'colsample_bytree': 0.6927246032466883, 'reg_alpha': 4.957917252958842, 'reg_lambda': 0.49906501660948677}. Best is trial 9 with value: 0.9299200547070712.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 19/20, fold 1/5: F1=0.92192, Top1=0.87408, fit=7.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 19/20, fold 2/5: F1=0.93458, Top1=0.89907, fit=7.8s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 19/20, fold 3/5: F1=0.90409, Top1=0.83230, fit=7.9s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 19/20, fold 4/5: F1=0.94882, Top1=0.91499, fit=8.2s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 19/20, fold 5/5: F1=0.93955, Top1=0.90530, fit=7.8s
+[I 2026-11-18 13:04:02,676] Trial 18 finished with value: 0.9297923045327533 and parameters: {'n_estimators': 300, 'learning_rate': 0.029225573788212278, 'num_leaves': 77, 'min_child_samples': 26, 'subsample': 0.6701833960003669, 'colsample_bytree': 0.6549493288526091, 'reg_alpha': 4.210016182121962, 'reg_lambda': 0.5329800489009191}. Best is trial 9 with value: 0.9299200547070712.
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 20/20, fold 1/5: F1=0.92121, Top1=0.87279, fit=10.3s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 20/20, fold 2/5: F1=0.93403, Top1=0.89777, fit=10.7s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 20/20, fold 3/5: F1=0.90350, Top1=0.83172, fit=10.6s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 20/20, fold 4/5: F1=0.94889, Top1=0.91515, fit=10.3s
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Trial 20/20, fold 5/5: F1=0.94037, Top1=0.90630, fit=10.3s
+[I 2026-11-18 13:05:05,594] Trial 19 finished with value: 0.9296007479459746 and parameters: {'n_estimators': 400, 'learning_rate': 0.022988402835982122, 'num_leaves': 94, 'min_child_samples': 32, 'subsample': 0.7401382669447412, 'colsample_bytree': 0.771230134984892, 'reg_alpha': 2.8497601766308605, 'reg_lambda': 0.7809766219572449}. Best is trial 9 with value: 0.9299200547070712.
+Search finished. Best trial 9: CV Macro F1=0.929920
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\Gudic\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  model  cv_macro_f1  cv_macro_f1_std  cv_top1_accuracy  student_test_macro_f1  student_test_top1_accuracy  student_test_log_loss  route_continuity  inference_ms_per_1000_obs  fit_s_full
+untuned     0.928518         0.017735          0.883506               0.934432                    0.896775               0.095923          0.946066                  36.856583    9.444920
+  tuned     0.929920         0.017244          0.884508               0.931910                    0.888988               0.098418          0.944756                  22.500078    7.011135
