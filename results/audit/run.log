@@ -1,0 +1,143 @@
+train/00000001: 1315 GPS points
+train/00000002: 7243 GPS points
+train/00000003: 821 GPS points
+train/00000004: 1064 GPS points
+train/00000005: 1045 GPS points
+train/00000006: 1450 GPS points
+train/00000008: 3093 GPS points
+train/00000010: 2711 GPS points
+train/00000011: 2828 GPS points
+train/00000012: 1608 GPS points
+train/00000013: 2580 GPS points
+train/00000014: 448 GPS points
+train/00000016: 1305 GPS points
+train/00000018: 379 GPS points
+train/00000019: 2354 GPS points
+train/00000020: 2353 GPS points
+train/00000021: 15783 GPS points
+train/00000022: 474 GPS points
+train/00000024: 801 GPS points
+train/00000025: 1179 GPS points
+train/00000026: 361 GPS points
+train/00000027: 694 GPS points
+train/00000028: 3565 GPS points
+train/00000029: 733 GPS points
+train/00000031: 4245 GPS points
+train/00000032: 2464 GPS points
+train/00000033: 5844 GPS points
+train/00000034: 3614 GPS points
+train/00000035: 1643 GPS points
+train/00000036: 1368 GPS points
+train/00000037: 677 GPS points
+train/00000038: 1287 GPS points
+train/00000039: 363 GPS points
+train/00000041: 1019 GPS points
+train/00000042: 7739 GPS points
+train/00000043: 2322 GPS points
+train/00000044: 546 GPS points
+train/00000045: 640 GPS points
+train/00000046: 1401 GPS points
+train/00000047: 1272 GPS points
+train/00000048: 1240 GPS points
+train/00000050: 518 GPS points
+train/00000051: 984 GPS points
+train/00000053: 1304 GPS points
+train/00000054: 19313 GPS points
+train/00000055: 2472 GPS points
+train/00000057: 1645 GPS points
+train/00000058: 599 GPS points
+train/00000060: 854 GPS points
+train/00000061: 1430 GPS points
+train/00000062: 3378 GPS points
+train/00000063: 2781 GPS points
+train/00000064: 2093 GPS points
+train/00000066: 4325 GPS points
+train/00000068: 747 GPS points
+train/00000069: 2067 GPS points
+train/00000070: 2076 GPS points
+train/00000071: 850 GPS points
+train/00000072: 969 GPS points
+train/00000074: 1929 GPS points
+train/00000075: 1628 GPS points
+train/00000078: 2909 GPS points
+train/00000079: 689 GPS points
+train/00000080: 2510 GPS points
+train/00000081: 3224 GPS points
+train/00000082: 4268 GPS points
+train/00000083: 1507 GPS points
+train/00000084: 16031 GPS points
+train/00000085: 1092 GPS points
+train/00000086: 4143 GPS points
+train/00000088: 876 GPS points
+train/00000089: 1228 GPS points
+train/00000090: 536 GPS points
+train/00000092: 7892 GPS points
+train/00000093: 1211 GPS points
+train/00000095: 1551 GPS points
+train/00000096: 3271 GPS points
+train/00000097: 1740 GPS points
+train/00000098: 5584 GPS points
+train/00000099: 2322 GPS points
+student_test/00000000: 2503 GPS points
+student_test/00000007: 1354 GPS points
+student_test/00000009: 1049 GPS points
+student_test/00000040: 2995 GPS points
+student_test/00000052: 262 GPS points
+student_test/00000056: 3958 GPS points
+student_test/00000065: 768 GPS points
+student_test/00000076: 1486 GPS points
+student_test/00000077: 3911 GPS points
+student_test/00000091: 874 GPS points
+{
+  "audited_trips": 90,
+  "failures": [],
+  "partitions": {
+    "student_test": {
+      "trips": 10,
+      "gps_points": 19160,
+      "nodes": 90689,
+      "arcs": 185041,
+      "route_entries": 3477,
+      "invalid_gps_rows": 0,
+      "invalid_node_rows": 0,
+      "invalid_arc_rows": 0,
+      "invalid_route_ids": 0,
+      "duplicate_track_rows": 0,
+      "nonpositive_time_steps": 0,
+      "one_second_steps": 18886,
+      "gaps_over_1s": 264,
+      "gaps_over_5s": 44,
+      "steps_over_55mps": 4,
+      "route_disconnected_pairs": 1,
+      "gps_over_50m_from_reference": 27,
+      "max_gap_s": 210.0,
+      "gps_points_min": 262,
+      "gps_points_median": 1420.0,
+      "gps_points_max": 3958
+    },
+    "train": {
+      "trips": 80,
+      "gps_points": 208417,
+      "nodes": 1933485,
+      "arcs": 3876904,
+      "route_entries": 31336,
+      "invalid_gps_rows": 0,
+      "invalid_node_rows": 0,
+      "invalid_arc_rows": 0,
+      "invalid_route_ids": 0,
+      "duplicate_track_rows": 0,
+      "nonpositive_time_steps": 0,
+      "one_second_steps": 201048,
+      "gaps_over_1s": 7286,
+      "gaps_over_5s": 1216,
+      "steps_over_55mps": 989,
+      "route_disconnected_pairs": 13,
+      "gps_over_50m_from_reference": 22576,
+      "max_gap_s": 153064.0,
+      "gps_points_min": 361,
+      "gps_points_median": 1529.0,
+      "gps_points_max": 19313
+    }
+  },
+  "unique_networks": 90
+}
