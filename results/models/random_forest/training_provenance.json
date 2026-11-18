@@ -1,0 +1,23 @@
+{
+  "command": "python -u experiments/02_train_random_forest.py",
+  "git_commit": "b14dd236c769f723b091826ec7c315d29b5d57aa",
+  "sha256": {
+    "src/models.py": "621c579a234c7c2d3e0f95bc8e0d4679caf96ee615c186b0d7dfa3c6147f283e",
+    "src/training.py": "7607c739ded3bf9a0310fce38e1bc73a18e5551e4a987bb4ac670a7de5d71104",
+    "src/features.py": "2d0905b515cea97e0c50d345fa001af717e41a3f1400fdab2b1b5d4ec8bc1fc8",
+    "src/labels.py": "4e22c8218c23d10d64dbbb07870d9cef19ec108bd0b94b3107a484ec7a560331",
+    "src/candidates.py": "eb2fc37441050046d169a0dafdcd799cfbb500769230721c0e135ca988b4861c",
+    "src/metrics.py": "964ea6d314d29c13ff440adce51b494e3467956d113c456a2245abedf3f7325b",
+    "src/preprocessing.py": "52141f98e3fa3a67a2c22b10cace04d1b753103fd9ceb76fa5ed3f9ace1838df",
+    "experiments/02_train_random_forest.py": "a5cf16b9e18aa497d68c75fb3cf37cd2c25d08ea74e562c5f7cece5395d7b60d",
+    "results/models/cv_fold_assignment.csv": "1a3b09857bb14e78a82e3e5a28f3e12c47fa683165ef83937b5b1db395370115",
+    "data/processed/tables/student_test_candidates.parquet": "7c1f9a70716c05bfe89972857c1f0395435e758a60e36ceef4f50e3f908768a7",
+    "data/processed/tables/student_test_observations.parquet": "0a1c4e8bc1ae32c96b98decc7a398828df9513be00bae88987f557093044c973",
+    "data/processed/tables/train_candidates.parquet": "acfcd81d10bf6034ce12d79315f3f9235ddc49d7eeffa4e3b2d0e0c398b2b1ef",
+    "data/processed/tables/train_observations.parquet": "2c380a449c7916d57a100e0a972463340c8bea95aac812845dd98b5fbf5e75ef"
+  },
+  "candidate_radius_m": 50,
+  "max_candidates": 8,
+  "label_validity": "Reference-derived alignment within 50 metres; uncertain observations excluded by existing training code.",
+  "evaluation_scope": "Classifier only, before HMM or Viterbi."
+}

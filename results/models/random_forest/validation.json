@@ -1,0 +1,10 @@
+{
+  "model_reload_passed": true,
+  "saved_probabilities_match": true,
+  "metrics_recomputed": true,
+  "five_folds_complete": true,
+  "cv_row_cap": null,
+  "student_test_candidate_rows": 113588,
+  "student_test_label_valid_observations": 19133,
+  "artifact_bytes": 21279459
+}
