@@ -56,3 +56,22 @@ def route_continuity(top1, arc_endpoints):
         a0, a1 = a[:-1][same_seq], a[1:][same_seq]
         ok += int(((a0 == a1) | (v[a0] == u[a1])).sum()); total += int(same_seq.sum())
     return float(ok / total) if total else float('nan')
+
+
+def route_overlap(predicted_arcs, reference_arcs, arc_lengths, canonical=None):
+    """Length-weighted overlap between a predicted route and the reference route (sets of arcs).
+
+    precision = length of predicted arcs that are on the reference / length of predicted arcs
+    recall    = length of reference arcs that were predicted     / length of reference arcs
+    canonical: optional array mapping duplicate arc rows to one id.
+    """
+    pred = np.unique(np.asarray(list(predicted_arcs), dtype=np.int64))
+    ref = np.unique(np.asarray(list(reference_arcs), dtype=np.int64))
+    if canonical is not None:
+        pred, ref = np.unique(canonical[pred]), np.unique(canonical[ref])
+    L = np.asarray(arc_lengths, dtype=float)
+    both = np.intersect1d(pred, ref)
+    p = L[both].sum() / L[pred].sum() if L[pred].sum() > 0 else float('nan')
+    r = L[both].sum() / L[ref].sum() if L[ref].sum() > 0 else float('nan')
+    f = 2 * p * r / (p + r) if p + r > 0 else 0.0
+    return dict(route_precision=float(p), route_recall=float(r), route_f1=float(f))

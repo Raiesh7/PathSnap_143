@@ -1,0 +1,16 @@
+{
+  "beta_m": 3.0,
+  "prob_floor": 0.0001,
+  "search_limit_m": 1000.0,
+  "same_arc_backward_tol_m": 15.0,
+  "selected_on": "TRAIN out-of-fold predictions, 80 trips",
+  "betas_tried": [
+    1,
+    2,
+    3,
+    5,
+    10,
+    20,
+    40
+  ]
+}
