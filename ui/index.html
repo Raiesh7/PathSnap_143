@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f4">
+  <meta name="description" content="PathSnap trajectory reconstruction workspace. A frontend preview with synthetic demo data, ready for backend integration.">
+  <title>PathSnap · Trajectory workspace</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./vendor/leaflet/leaflet.js" defer></script>
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to workspace</a>
+  <header class="app-header">
+    <a class="brand" href="./" aria-label="PathSnap home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M8 24V12a5 5 0 0 1 5-5h7a5 5 0 0 1 0 10h-7"/><circle cx="8" cy="24" r="3"/><circle cx="13" cy="17" r="2"/></svg></span>
+      <span>PathSnap<span class="brand-dot">.</span></span>
+    </a>
+    <span class="header-divider"></span><span class="workspace-label">Trajectory workspace</span>
+    <div class="header-actions"><span class="demo-badge"><span></span>Demo mode</span><button class="help-button" id="help-button" type="button"><span aria-hidden="true">?</span> How it works</button></div>
+  </header>
+  <main id="workspace" class="workspace">
+    <section class="page-intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">FROM SIGNAL TO STREET</p><h1 id="page-title">A clearer path from every point.</h1><p class="intro-description">Explore GPS observations and reconstruct the journey between them.</p></div>
+      <div class="connection-state"><span class="connection-dot"></span><div><strong>Frontend preview</strong><span>Backend not connected</span></div></div>
+    </section>
+    <div class="demo-notice" role="note"><span class="notice-icon" aria-hidden="true">i</span><p><strong>A space to explore.</strong> Routes, trip IDs and metrics in this preview are synthetic. Real inference will be available after API integration.</p></div>
+    <div class="workspace-grid">
+      <aside class="sidebar" aria-label="Trip and display controls">
+        <section class="panel trip-panel">
+          <div class="section-heading"><span class="step-number">01</span><h2>Choose a journey</h2></div>
+          <label class="field-label" for="trip-select">Demo trip</label>
+          <div class="select-wrap"><select id="trip-select" aria-describedby="trip-help"><option value="">Loading demo trips…</option></select><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></div>
+          <p id="trip-help" class="field-help">10 sample journeys · no evaluator data</p>
+          <div class="trip-context"><span class="location-icon" aria-hidden="true">⌖</span><div><strong id="trip-name">Loading journey</strong><span id="trip-description">Preparing the preview</span></div></div>
+          <dl class="trip-facts"><div><dt>GPS points</dt><dd id="point-count">—</dd></div><div><dt>Duration</dt><dd id="duration">—</dd></div><div><dt>Distance</dt><dd id="distance">—</dd></div></dl>
+          <button id="reconstruct-button" class="primary-button" type="button" disabled><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 15V7a3 3 0 0 1 3-3h6a3 3 0 0 1 0 6H8"/><circle cx="4" cy="15" r="2"/><path d="m10 8-2 2 2 2"/></svg><span>Reconstruct route</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+          <p class="button-hint">Preview a simulated reconstruction</p>
+        </section>
+        <section class="panel layers-panel">
+          <div class="section-heading"><span class="step-number">02</span><h2>Explore the layers</h2></div>
+          <label class="layer-option"><span class="layer-swatch gps-swatch"></span><span><strong>GPS observations</strong><small>The original point sequence</small></span><input id="layer-gps" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
+          <label class="layer-option"><span class="layer-swatch classifier-swatch"></span><span><strong>Classifier path</strong><small>Before sequence decoding</small></span><input id="layer-classifier" type="checkbox" disabled><span class="switch" aria-hidden="true"></span></label>
+          <label class="layer-option"><span class="layer-swatch matched-swatch"></span><span><strong>Reconstructed route</strong><small>After HMM / Viterbi</small></span><input id="layer-matched" type="checkbox" checked disabled><span class="switch" aria-hidden="true"></span></label>
+          <div class="layer-note"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 12 9 3l6 9H3Z"/><path d="M9 7v2m0 1v1"/></svg>Route layers appear after reconstruction.</div>
+        </section>
+        <section class="method-card"><span class="eyebrow">UNDER THE HOOD</span><h3>Points. Candidates. A path.</h3><p>Candidate scoring finds plausible roads. HMM / Viterbi connects them into a coherent journey.</p><div class="method-pipeline"><span>GPS</span><i>→</i><span>LightGBM</span><i>→</i><span>HMM</span></div></section>
+      </aside>
+      <div class="main-column">
+        <section class="panel map-panel" aria-labelledby="map-title">
+          <header class="map-header"><div><div class="map-title-line"><span class="map-status-dot"></span><h2 id="map-title">Journey overview</h2><span class="subtle-tag" id="trip-id-label">DEMO</span></div><p id="map-subtitle">Synthetic GPS track · illustrative street network</p></div><button class="icon-button fit-button" id="fit-button" type="button" title="Fit the entire journey"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/><path d="M7 10h6m-3-3v6"/></svg><span>Fit route</span></button></header>
+          <div class="map-wrap"><div id="map" aria-label="Interactive map of the synthetic GPS journey"></div><div class="map-label"><span></span>ILLUSTRATIVE MAP</div><div id="map-empty" class="map-empty" hidden><h3>Map unavailable</h3><p>Reload the page to restore the local map library.</p></div><div class="map-loading" id="map-loading" hidden><div class="spinner"></div><strong id="loading-label">Preparing observations</strong><span>Simulated demo run</span></div></div>
+          <footer class="map-footer"><div class="map-legend"><span><i class="legend-dot"></i>GPS observations</span><span><i class="legend-line"></i>Reconstructed route</span></div><span class="map-instruction">Drag to pan · + / − to zoom</span></footer>
+        </section>
+        <section class="results-section" aria-labelledby="results-title"><div class="results-heading"><h2 id="results-title">Reconstruction results</h2><span id="results-badge" class="subtle-tag">AWAITING A RUN</span></div>
+          <div id="error-panel" class="error-panel" role="alert" hidden><div><strong>We couldn’t reconstruct this journey.</strong><p id="error-message"></p></div><button id="retry-button" type="button">Try again</button></div>
+          <div class="metric-grid"><article class="metric-card"><div class="metric-label">Top-1 road accuracy<span title="Share of eligible GPS observations matched to the reference road. API must return this aggregate score; reference routes stay server-side.">i</span></div><strong id="metric-accuracy">—<small>%</small></strong><p>Correct road per observation</p></article><article class="metric-card"><div class="metric-label">Route continuity<span title="Share of consecutive predictions staying on the same arc or directly connected arcs.">i</span></div><strong id="metric-continuity">—<small>%</small></strong><p>A more connected journey</p></article><article class="metric-card"><div class="metric-label">Processing time<span title="Total processing time reported by the service, not a measured browser benchmark.">i</span></div><strong id="metric-time">—<small>s</small></strong><p>From observations to a route</p></article></div>
+          <div class="result-detail"><div class="result-state" id="result-state"><span class="state-icon" aria-hidden="true">↗</span><div><strong id="result-title">Your next journey starts here</strong><p id="result-description">Select a trip and reconstruct its route to explore the results.</p></div></div><button id="export-button" class="secondary-button" type="button" disabled><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 2v9m-3-3 3 3 3-3M3 12v3h12v-3"/></svg>Export GeoJSON</button></div>
+        </section>
+      </div>
+    </div>
+    <footer class="page-footer"><span>PathSnap <span class="footer-separator">/</span> Map matching &amp; route reconstruction</span><span>Demo data only <span class="footer-separator">·</span> No backend requests</span></footer>
+    <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+  </main>
+  <dialog id="help-dialog" aria-labelledby="help-title"><div class="dialog-heading"><span class="eyebrow">THE JOURNEY EXPLAINED</span><button class="icon-button" id="close-help" type="button" aria-label="Close explanation">×</button></div><h2 id="help-title">From noisy points to a connected path.</h2><ol class="help-steps"><li><strong>Choose a journey</strong><p>A trip contains a sequence of GPS observations and a road network.</p></li><li><strong>Score the candidates</strong><p>The classifier considers distance, direction, movement and local context.</p></li><li><strong>Connect the sequence</strong><p>HMM / Viterbi balances candidate scores with plausible movement between roads.</p></li></ol><p class="dialog-note">This interface currently simulates that flow with synthetic fixtures. No model is executed, no evaluator files are loaded, and displayed metrics are illustrative.</p><button class="primary-button" id="help-done" type="button">Explore the workspace <span aria-hidden="true">↗</span></button></dialog>
+</body>
+</html>

@@ -18,6 +18,19 @@ Distributed map-matching and route reconstruction for the ML Hackathon.
 The supplied development dataset is versioned in `data/Student folder/`:
 80 training trips and 10 student-testing trips. See [data/README.md](data/README.md).
 
+## Frontend interface preview
+
+The [UI workspace](ui/README.md) is implemented with explicitly synthetic demo
+data, before API integration. Run it locally without installing frontend packages:
+
+```powershell
+python -m http.server 5173 --bind 127.0.0.1 --directory ui
+```
+
+Open http://127.0.0.1:5173. The proposed integration boundary is documented in
+[ui/API_CONTRACT.md](ui/API_CONTRACT.md). No evaluator data or reference labels
+are included in the interface.
+
 ## Dataset audit
 
 Install `requirements.txt`, then run:
