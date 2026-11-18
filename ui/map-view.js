@@ -4,15 +4,14 @@ export class JourneyMap {
   constructor(){
     if(!window.L)throw new Error('The local map library could not be loaded.');
     const L=window.L;
-    this.map=L.map('map',{zoomControl:false,attributionControl:true,scrollWheelZoom:false,minZoom:10,maxZoom:19});
+    this.map=L.map('map',{zoomControl:false,attributionControl:true,scrollWheelZoom:false,minZoom:2,maxZoom:19});
     L.control.zoom({position:'topright'}).addTo(this.map);
     this.map.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank" rel="noopener noreferrer">Leaflet</a>');
-    this.map.attributionControl.addAttribution('PathSnap · synthetic geometry');
     this.background=L.layerGroup();
     this.gps=L.layerGroup();this.classifier=L.layerGroup();this.matched=L.layerGroup();this.endpoints=L.layerGroup();
     this.map.createPane('gps-points');this.map.getPane('gps-points').style.zIndex=440;
+    this.gpsRenderer=L.canvas({pane:'gps-points',padding:.3});
     this.map.createPane('route-line');this.map.getPane('route-line').style.zIndex=420;
-    this.buildBackground();
     this.visibility={gps:true,classifier:false,matched:true};
     this.bounds=null;
     this.map.setView([12.9747,77.606],15);
@@ -42,7 +41,16 @@ export class JourneyMap {
   preview(data){
     const L=window.L;
     for(const group of [this.gps,this.classifier,this.matched,this.endpoints])group.clearLayers();
+    document.getElementById('basemap-notice').hidden=true;
+    this.map.attributionControl.removeAttribution('PathSnap · synthetic geometry');
+    if(!data.observations.length){
+      this.map.removeLayer(this.background);
+      if(this.streetTiles){this.map.removeLayer(this.streetTiles);this.streetTiles=null;}
+      this.bounds=null;return;
+    }
     if(data.demo){
+      if(!this.demoBackgroundBuilt){this.buildBackground();this.demoBackgroundBuilt=true;}
+      this.map.attributionControl.addAttribution('PathSnap · synthetic geometry');
       if(this.streetTiles){this.map.removeLayer(this.streetTiles);this.streetTiles=null;}
       this.background.addTo(this.map);
       this.map.setMaxBounds([[12.948,77.575],[13.0,77.645]]);
@@ -50,11 +58,11 @@ export class JourneyMap {
       this.map.removeLayer(this.background);this.map.setMaxBounds([[-85,-180],[85,180]]);
       if(!this.streetTiles)this.streetTiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
         maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      }).addTo(this.map);
+      }).on('tileerror',()=>{document.getElementById('basemap-notice').hidden=false;}).addTo(this.map);
     }
     for(const observation of data.observations){
       const marker=L.circleMarker([observation.coordinates[1],observation.coordinates[0]],{
-        radius:3,weight:.9,color:'#fff',fillColor:'#6688be',fillOpacity:.9,pane:'gps-points',
+        radius:3,weight:.9,color:'#fff',fillColor:'#6688be',fillOpacity:.9,pane:'gps-points',renderer:this.gpsRenderer,
       });
       const content=document.createElement('span');
       content.textContent=`GPS observation ${observation.id} · ${observation.timestamp_s??'—'} s`;
@@ -70,6 +78,7 @@ export class JourneyMap {
     for(const line of data.classifier_route?.coordinates||[])L.polyline(asLatLng(line),{color:'#b58b4c',weight:3,dashArray:'7 7',opacity:.85,pane:'route-line'}).addTo(this.classifier);
     for(const line of data.matched_route?.coordinates||[]){
       const points=asLatLng(line);
+      this.bounds?.extend(points);
       L.polyline(points,{color:'#fff',weight:8,opacity:.95,pane:'route-line',interactive:false}).addTo(this.matched);
       L.polyline(points,{color:'#218767',weight:4.5,opacity:1,pane:'route-line'}).addTo(this.matched);
       for(const [point,end] of [[points[0],false],[points.at(-1),true]]){
@@ -77,10 +86,14 @@ export class JourneyMap {
           title:end?'Route end':'Route start'}).addTo(this.endpoints);
       }
     }
-    this.syncLayers();
+    this.syncLayers();this.fit();
   }
   clearResult(){this.classifier.clearLayers();this.matched.clearLayers();this.endpoints.clearLayers();}
-  clearPreview(){this.clearResult();this.gps.clearLayers();}
+  clearPreview(){
+    this.clearResult();this.gps.clearLayers();this.bounds=null;this.map.removeLayer(this.background);
+    if(this.streetTiles){this.map.removeLayer(this.streetTiles);this.streetTiles=null;}
+    document.getElementById('basemap-notice').hidden=true;
+  }
   setVisible(name,visible){this.visibility[name]=visible;this.syncLayers();}
   syncLayers(){
     for(const name of ['gps','classifier','matched']){

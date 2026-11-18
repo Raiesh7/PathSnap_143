@@ -18,18 +18,25 @@ Distributed map-matching and route reconstruction for the ML Hackathon.
 The supplied development dataset is versioned in `data/Student folder/`:
 80 training trips and 10 student-testing trips. See [data/README.md](data/README.md).
 
-## Frontend interface preview
+## Frontend and API
 
-The [UI workspace](ui/README.md) is implemented with explicitly synthetic demo
-data, before API integration. Run it locally without installing frontend packages:
+The [UI](ui/README.md) connects to FastAPI for GPS observations, tuned LightGBM +
+HMM predictions, aggregate scores and GeoJSON export. From the repository root:
+
+```powershell
+$env:PATHSNAP_TRIPS_DIR = "data/Student folder/student_test"
+python -m uvicorn api.main:app --host 127.0.0.1 --port 8000
+```
+
+In another terminal:
 
 ```powershell
 python -m http.server 5173 --bind 127.0.0.1 --directory ui
 ```
 
-Open http://127.0.0.1:5173. The proposed integration boundary is documented in
-[ui/API_CONTRACT.md](ui/API_CONTRACT.md). No evaluator data or reference labels
-are included in the interface.
+Open http://127.0.0.1:5173, select a trip and reconstruct. Use Connection to change
+the API address. See [API contract](ui/API_CONTRACT.md) and
+[backend instructions](api/README.md). Reference routes and labels stay server-side.
 
 ## Dataset audit
 

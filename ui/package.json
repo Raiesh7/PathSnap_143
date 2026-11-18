@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Local PathSnap frontend preview with synthetic demo fixtures",
+  "description": "PathSnap frontend connected to the FastAPI prediction service",
   "scripts": {
     "test": "node --test tests/*.test.js",
     "check": "node --check app.js && node --check map-view.js && node --check services/trajectory-service.js && node --check services/demo-data.js"

@@ -12,6 +12,7 @@ results/*.json
 maps/*.html
 .audit_deps/
 data/processed/
+data/Student folder/evaluator_test/
 
 artifacts/models/random_forest.joblib
 artifacts/models/knn.joblib

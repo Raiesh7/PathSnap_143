@@ -13,6 +13,24 @@
   color:var(--ink);
   font-synthesis:none
 }
+.demo-badge.api-mode{background:#edf5f0;color:#38694f;border-color:#d8e8dc}
+.demo-badge.api-mode>span{background:#5c9475}
+.connection-state[data-state="connected"] .connection-dot{background:#388260;box-shadow:0 0 0 4px #e7f0e8}
+.connection-state[data-state="error"] .connection-dot{background:#bc7a60;box-shadow:0 0 0 4px #f4e9e3}
+.map-placeholder{position:absolute;inset:0;z-index:490;background:radial-gradient(ellipse at center,#f4f7ef,#e8ede3);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:#64785f}
+.placeholder-path{font-size:65px;color:#91a48b;line-height:1;margin-bottom:15px}
+.map-placeholder h3{font-size:20px;font-weight:550;letter-spacing:-.4px;margin:0 0 10px}
+.map-placeholder p{font-size:12px;line-height:1.8;color:#899581;margin:0}
+.basemap-notice{position:absolute;z-index:460;bottom:12px;left:12px;max-width:calc(100% - 80px);padding:7px 10px;background:#fffffff0;border:1px solid #dce3d5;border-radius:6px;font-size:10px;color:#687864}
+.run-details{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:16px 18px;margin:13px 0 0;border:1px solid #e1e7da;border-radius:10px;background:#f0f4ec}
+.run-details dt{font-size:9px;color:#819079;margin-bottom:7px;line-height:1.5}
+.run-details dd{font-family:Consolas,monospace;font-size:14px;color:#47643f;margin:0}
+.connection-help{font-size:12px;line-height:1.8;color:#788773;margin-bottom:20px}
+#backend-url{display:block;width:100%;border:1px solid #dce3d9;border-radius:8px;padding:12px;color:var(--ink);font:inherit;font-size:13px}
+#backend-url:focus-visible{outline:3px solid #8ec6b5;outline-offset:3px}
+.connection-error{font-size:12px;line-height:1.6;color:#924733}
+.error-panel p,.result-state p{overflow-wrap:anywhere}
+@media(max-width:760px){.run-details{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.header-actions{gap:10px}.map-placeholder h3{font-size:18px}.map-placeholder p{font-size:11px}.basemap-notice{font-size:9px}}
 *{
   box-sizing:border-box
 }

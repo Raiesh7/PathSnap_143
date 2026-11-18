@@ -1,78 +1,73 @@
-# PathSnap trajectory workspace
+# PathSnap UI
 
-Local frontend for trip selection, GPS and predicted-route inspection, aggregate
-results and GeoJSON export. This branch implements the interface before backend
-integration. It does **not** run a model or contain evaluator inputs, reference
-routes, labels or real evaluation scores.
+The frontend connects to FastAPI by default and displays real GPS observations,
+tuned LightGBM + HMM/Viterbi routes, server-side scores and GeoJSON exports.
+No frontend dependency installation or build is required.
 
 ## Run locally
 
-From the repository root:
+From the repository root, install Python dependencies once:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+Start the backend on development trips for rehearsal:
+
+```powershell
+$env:PATHSNAP_TRIPS_DIR = "data/Student folder/student_test"
+python -m uvicorn api.main:app --host 127.0.0.1 --port 8000
+```
+
+In another terminal, from the repository root:
 
 ```powershell
 python -m http.server 5173 --bind 127.0.0.1 --directory ui
 ```
 
-Open http://127.0.0.1:5173. No npm install or frontend build is required. Serve
-over HTTP rather than opening index.html directly, because it uses ES modules.
-The local vendored Leaflet 1.9.4 library makes the demo map work offline.
+Open http://127.0.0.1:5173. Select a trip and click Reconstruct route.
+The default API URL is http://127.0.0.1:8000. The Connection dialog changes
+this address and remembers it in browser storage. Selection alone does not run
+inference; GPS observations arrive with the prediction response.
 
-The current service is **demo mode**. All ten demo IDs, GPS points, street
-geometry, routes and metrics are synthetic fixtures, explicitly labelled in the
-interface and exported GeoJSON. They must not be presented as model performance
-or used in the final evaluator demonstration.
+## Two laptops
 
-## Interface behaviour
+Run the backend on Laptop 1 with `--host 0.0.0.0`. Serve the frontend on Laptop 2
+and enter Laptop 1's reachable URL in Connection, for example
+`http://192.168.1.20:8000`. The network must permit this connection. If overriding
+`PATHSNAP_CORS`, allow the actual frontend origin. HTTPS pages require an HTTPS
+API. See [backend instructions](../api/README.md). Physical two-laptop operation
+was not tested; local cross-origin requests were verified.
 
-- Select one of ten synthetic journeys and inspect its observations.
-- Reconstruct a route through a labelled simulated loading flow.
-- Toggle GPS observations, classifier path and HMM/Viterbi route independently.
-- Pan, zoom, fit the route and inspect observation tooltips.
-- View illustrative aggregate scores; unavailable scores display an em dash.
-- Export the current route as GeoJSON, marked `demo: true` in demo mode.
-- Changing trips cancels an in-flight reconstruction and clears stale results.
-- Loading, empty-route, service error and retry states are handled.
-- Responsive layout, labelled controls, keyboard focus, live announcements and
-  reduced-motion support are included.
+## Display behaviour
 
-## Backend connection seam
+- GPS points and predicted route sections remain separate across gaps.
+- Scores come from the backend; missing scores show as unavailable.
+- Prediction time excludes server-side scoring and network transfer.
+- Duration is the GPS timestamp span. Distance sums geodesic distances within
+  predicted sections without bridging gaps.
+- Classifier-only accuracy is an aggregate comparison. The API supplies no
+  classifier geometry, so that map control is hidden.
+- Export contains predicted MultiLineString geometry with `demo: false`.
+- Reference routes and pointwise labels stay on the backend.
+- Changing trips cancels the browser request and discards stale results.
+- Connection errors and empty trip lists show actionable messages.
 
-`services/trajectory-service.js` exposes `listTrips`, `preview` and
-`reconstruct`. `app.js` consumes that interface. A separate API adapter is
-provided, but is not used in demo mode and has not been tested against a real
-backend. The proposed routes and JSON shapes are documented in
-[API_CONTRACT.md](API_CONTRACT.md); agree them with the backend teammate first.
+OpenStreetMap street tiles require internet and retain attribution. If tiles
+fail, GPS and route overlays remain usable with a basemap notice. Leaflet is
+vendored locally. Synthetic fixtures are available only by explicitly setting
+`mode: 'demo'` in config.js. API failures never silently use demo results.
 
-Then set `mode: 'api'` and the Laptop 1 URL in `config.js`, for example
-`http://192.168.1.20:8000`. Serve this UI on Laptop 2. The API must allow its
-actual frontend origin in CORS and remain accessible on the local network.
-Production HTTPS pages also need an HTTPS API to avoid mixed-content blocking.
+## Verification
 
-For real trips, the map uses OpenStreetMap tiles, which require internet and
-display attribution. The offline street background is used only for synthetic
-demo fixtures. Ground-truth routes must remain server-side; only observed GPS,
-predicted geometry and aggregate metrics belong in the response.
-
-## Checks
-
-From the ui directory, using Node.js 18 or newer:
+From ui, using Node.js 18 or newer:
 
 ```powershell
 npm run check
 npm test
+node tests/live-api-smoke.js http://127.0.0.1:8000
 ```
 
-Service tests cover the ten fixtures, validation, omission of reference fields,
-request payloads, useful failures and cancellation. Browser testing is also
-needed for maps, exports, keyboard interaction and responsive layout.
-
-## Files
-
-- `index.html`, `styles.css`: layout and visual design.
-- `app.js`: interface state and events.
-- `map-view.js`: Leaflet map and route layers.
-- `services/demo-data.js`: explicitly synthetic fixtures.
-- `services/trajectory-service.js`: demo and API adapters.
-- `config.js`: mode and API base URL.
-- `vendor/leaflet/`: Leaflet 1.9.4, distributed under its included BSD license.
-
+The opt-in smoke check refuses trip lists other than the ten student-test IDs.
+It checks real predictions through the frontend adapter and CORS preflight.
+It does not train or tune. See [QA.md](QA.md) and [API_CONTRACT.md](API_CONTRACT.md).
