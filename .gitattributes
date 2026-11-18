@@ -1,3 +1,4 @@
 # Preserve raw file bytes and SHA-256 hashes across Windows and Unix checkouts.
 "data/Student folder/**" -text
 maps/audit/*.html linguist-generated=true
+*.joblib binary
