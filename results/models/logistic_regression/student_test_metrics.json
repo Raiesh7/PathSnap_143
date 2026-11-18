@@ -1,0 +1,26 @@
+{
+  "accuracy": 0.9465260414832553,
+  "precision_macro": 0.9064564957538346,
+  "recall_macro": 0.901063199374849,
+  "f1_macro": 0.903729244759157,
+  "f1_positive": 0.8395413958894701,
+  "log_loss": 0.14406864406129413,
+  "confusion": [
+    [
+      91624,
+      2879
+    ],
+    [
+      3195,
+      15890
+    ]
+  ],
+  "top1_accuracy": 0.8579417759891287,
+  "candidate_miss_rate": 0.0025087545079182094,
+  "top1_accuracy_when_covered": 0.8600995546240503,
+  "route_continuity": 0.935426385030662,
+  "inference_s": 0.04937131600036082,
+  "inference_ms_per_1000_obs": 2.580427324536707,
+  "fit_s_full": 7.445928623999862,
+  "train_rows_full": 1058904
+}

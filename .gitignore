@@ -13,3 +13,5 @@ maps/*.html
 .audit_deps/
 data/processed/
 
+artifacts/models/random_forest.joblib
+artifacts/models/knn.joblib
