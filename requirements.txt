@@ -1,8 +1,10 @@
+# Versions of numpy/pandas/scikit-learn/lightgbm/optuna pinned to those used to train
+# artifacts/models/lightgbm_tuned.joblib (results/tuning/lightgbm/search_config.json).
 fastapi
 uvicorn
-numpy
-pandas
-scikit-learn
+numpy==2.2.6
+pandas==2.3.1
+scikit-learn==1.7.2
 scipy
 joblib
 shapely
@@ -11,8 +13,8 @@ geopandas
 folium
 matplotlib
 seaborn
-optuna
+optuna==5.1.0
 pydantic
-
 pyarrow
-lightgbm
+lightgbm==4.6.0
+httpx
