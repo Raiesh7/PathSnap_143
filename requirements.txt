@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+numpy
+pandas
+scikit-learn
+scipy
+joblib
+shapely
+pyproj
+geopandas
+folium
+matplotlib
+seaborn
+optuna
+pydantic
+
