@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "raw_files_hash_verified": 360,
+  "caches_verified": 90,
+  "audit_parity": true,
+  "implementation_hashes_match": true,
+  "reference_features_absent": true,
+  "boundary_motion_missing": true,
+  "totals": {
+    "observations": 227577,
+    "sequences": 1350,
+    "gaps": 1260,
+    "speed_flags": 993
+  }
+}

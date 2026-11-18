@@ -1,0 +1,21 @@
+test_cache_roundtrip_without_pickle (test_preprocessing.LoaderTests.test_cache_roundtrip_without_pickle) ... ok
+test_evaluator_partition_rejected (test_preprocessing.LoaderTests.test_evaluator_partition_rejected) ... ok
+test_invalid_nodes_rejected (test_preprocessing.LoaderTests.test_invalid_nodes_rejected) ... ok
+test_malformed_blank_and_missing_files_fail (test_preprocessing.LoaderTests.test_malformed_blank_and_missing_files_fail) ... ok
+test_preprocessing_needs_no_reference_and_ignores_poisoned_reference (test_preprocessing.LoaderTests.test_preprocessing_needs_no_reference_and_ignores_poisoned_reference) ... ok
+test_all_invalid_observations_use_nodes_for_projection (test_preprocessing.PreprocessingTests.test_all_invalid_observations_use_nodes_for_projection) ... ok
+test_antimeridian_is_local (test_preprocessing.PreprocessingTests.test_antimeridian_is_local) ... ok
+test_configuration_rejects_invalid_thresholds (test_preprocessing.PreprocessingTests.test_configuration_rejects_invalid_thresholds) ... ok
+test_exact_boundary_and_nonpositive_time (test_preprocessing.PreprocessingTests.test_exact_boundary_and_nonpositive_time) ... ok
+test_gap_and_invalid_rows_never_bridge_motion (test_preprocessing.PreprocessingTests.test_gap_and_invalid_rows_never_bridge_motion) ... ok
+test_input_arrays_are_unchanged (test_preprocessing.PreprocessingTests.test_input_arrays_are_unchanged) ... ok
+test_invalid_timestamp_restarts_next_valid_observation (test_preprocessing.PreprocessingTests.test_invalid_timestamp_restarts_next_valid_observation) ... ok
+test_metric_geometry_and_direction (test_preprocessing.PreprocessingTests.test_metric_geometry_and_direction) ... ok
+test_parallel_and_zero_length_arcs_keep_ids_and_shortest_cost (test_preprocessing.PreprocessingTests.test_parallel_and_zero_length_arcs_keep_ids_and_shortest_cost) ... ok
+test_speed_flag_does_not_delete_fast_travel (test_preprocessing.PreprocessingTests.test_speed_flag_does_not_delete_fast_travel) ... ok
+test_stationary_and_duplicates_retained_without_heading (test_preprocessing.PreprocessingTests.test_stationary_and_duplicates_retained_without_heading) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.217s
+
+OK

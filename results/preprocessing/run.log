@@ -1,0 +1,141 @@
+train/00000001: 1315 observations; 2 sequences
+train/00000002: 7243 observations; 79 sequences
+train/00000003: 821 observations; 1 sequences
+train/00000004: 1064 observations; 321 sequences
+train/00000005: 1045 observations; 1 sequences
+train/00000006: 1450 observations; 10 sequences
+train/00000008: 3093 observations; 1 sequences
+train/00000010: 2711 observations; 1 sequences
+train/00000011: 2828 observations; 2 sequences
+train/00000012: 1608 observations; 1 sequences
+train/00000013: 2580 observations; 32 sequences
+train/00000014: 448 observations; 11 sequences
+train/00000016: 1305 observations; 1 sequences
+train/00000018: 379 observations; 1 sequences
+train/00000019: 2354 observations; 1 sequences
+train/00000020: 2353 observations; 1 sequences
+train/00000021: 15783 observations; 3 sequences
+train/00000022: 474 observations; 88 sequences
+train/00000024: 801 observations; 5 sequences
+train/00000025: 1179 observations; 1 sequences
+train/00000026: 361 observations; 47 sequences
+train/00000027: 694 observations; 1 sequences
+train/00000028: 3565 observations; 8 sequences
+train/00000029: 733 observations; 1 sequences
+train/00000031: 4245 observations; 1 sequences
+train/00000032: 2464 observations; 20 sequences
+train/00000033: 5844 observations; 1 sequences
+train/00000034: 3614 observations; 21 sequences
+train/00000035: 1643 observations; 1 sequences
+train/00000036: 1368 observations; 1 sequences
+train/00000037: 677 observations; 11 sequences
+train/00000038: 1287 observations; 12 sequences
+train/00000039: 363 observations; 46 sequences
+train/00000041: 1019 observations; 3 sequences
+train/00000042: 7739 observations; 46 sequences
+train/00000043: 2322 observations; 4 sequences
+train/00000044: 546 observations; 3 sequences
+train/00000045: 640 observations; 1 sequences
+train/00000046: 1401 observations; 19 sequences
+train/00000047: 1272 observations; 1 sequences
+train/00000048: 1240 observations; 1 sequences
+train/00000050: 518 observations; 1 sequences
+train/00000051: 984 observations; 1 sequences
+train/00000053: 1304 observations; 2 sequences
+train/00000054: 19313 observations; 7 sequences
+train/00000055: 2472 observations; 2 sequences
+train/00000057: 1645 observations; 3 sequences
+train/00000058: 599 observations; 9 sequences
+train/00000060: 854 observations; 13 sequences
+train/00000061: 1430 observations; 1 sequences
+train/00000062: 3378 observations; 31 sequences
+train/00000063: 2781 observations; 1 sequences
+train/00000064: 2093 observations; 1 sequences
+train/00000066: 4325 observations; 1 sequences
+train/00000068: 747 observations; 2 sequences
+train/00000069: 2067 observations; 3 sequences
+train/00000070: 2076 observations; 2 sequences
+train/00000071: 850 observations; 31 sequences
+train/00000072: 969 observations; 1 sequences
+train/00000074: 1929 observations; 11 sequences
+train/00000075: 1628 observations; 1 sequences
+train/00000078: 2909 observations; 125 sequences
+train/00000079: 689 observations; 1 sequences
+train/00000080: 2510 observations; 16 sequences
+train/00000081: 3224 observations; 130 sequences
+train/00000082: 4268 observations; 1 sequences
+train/00000083: 1507 observations; 1 sequences
+train/00000084: 16031 observations; 5 sequences
+train/00000085: 1092 observations; 7 sequences
+train/00000086: 4143 observations; 1 sequences
+train/00000088: 876 observations; 13 sequences
+train/00000089: 1228 observations; 17 sequences
+train/00000090: 536 observations; 21 sequences
+train/00000092: 7892 observations; 1 sequences
+train/00000093: 1211 observations; 2 sequences
+train/00000095: 1551 observations; 1 sequences
+train/00000096: 3271 observations; 1 sequences
+train/00000097: 1740 observations; 1 sequences
+train/00000098: 5584 observations; 14 sequences
+train/00000099: 2322 observations; 2 sequences
+student_test/00000000: 2503 observations; 1 sequences
+student_test/00000007: 1354 observations; 1 sequences
+student_test/00000009: 1049 observations; 1 sequences
+student_test/00000040: 2995 observations; 1 sequences
+student_test/00000052: 262 observations; 1 sequences
+student_test/00000056: 3958 observations; 1 sequences
+student_test/00000065: 768 observations; 6 sequences
+student_test/00000076: 1486 observations; 40 sequences
+student_test/00000077: 3911 observations; 1 sequences
+student_test/00000091: 874 observations; 1 sequences
+{
+  "schema_version": 1,
+  "config": {
+    "gap_seconds": 5.0,
+    "speed_flag_mps": 55.0,
+    "zero_length_tolerance_m": 1e-06,
+    "heading_min_distance_m": 1.0,
+    "projection_review_radius_m": 250000.0
+  },
+  "partitions": {
+    "student_test": {
+      "trips": 10,
+      "observation_count": 19160,
+      "invalid_observations": 0,
+      "sequence_count": 54,
+      "gap_count": 44,
+      "speed_flags": 4,
+      "zero_length_arcs": 6,
+      "duplicate_connections": 128,
+      "nonpositive_time_steps": 0,
+      "duplicate_observations": 0
+    },
+    "train": {
+      "trips": 80,
+      "observation_count": 208417,
+      "invalid_observations": 0,
+      "sequence_count": 1296,
+      "gap_count": 1216,
+      "speed_flags": 989,
+      "zero_length_arcs": 100,
+      "duplicate_connections": 1775,
+      "nonpositive_time_steps": 0,
+      "duplicate_observations": 0
+    }
+  },
+  "failures": [],
+  "reference_used": false,
+  "cache_written": true,
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.1",
+    "scipy": "1.16.1",
+    "pyproj": "3.8.0"
+  },
+  "implementation_sha256": {
+    "src/config.py": "77519ce9a60fc4ffbd5aac60a828235d7d1edaa53706376cacd1796e2f8b1049",
+    "src/data_loader.py": "af58268db6270d5573585960a808eeca304fd90a8b056ecf0e11b423e3a31955",
+    "src/preprocessing.py": "52141f98e3fa3a67a2c22b10cace04d1b753103fd9ceb76fa5ed3f9ace1838df",
+    "experiments/01b_preprocess_dataset.py": "d8343957871ffbb25386700c4aca17ab3dc61aaf68110e9f4e813b25662731da"
+  }
+}

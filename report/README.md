@@ -8,3 +8,6 @@ Plot interpretations and preprocessing implications are in
 materials; the consolidated final PDF will also need the actual model,
 optimisation, decoder and deployment results when those stages are complete.
 
+The implemented preprocessing rules, output schema, validation evidence and
+measured effects are documented in [preprocessing.md](preprocessing.md).
+

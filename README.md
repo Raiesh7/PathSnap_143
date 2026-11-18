@@ -33,3 +33,29 @@ Folium maps to `maps/audit/`, and report source to
 browser; scripts and OpenStreetMap tiles require internet access. Static PNGs
 can be viewed offline. This stage does not train models or create pointwise labels.
 
+## Preprocessing
+
+```powershell
+python experiments/01b_preprocess_dataset.py --cache-dir data/processed
+python -m unittest discover -s tests -v
+```
+
+Preprocessing preserves raw observations and IDs, projects coordinates to metres,
+builds directed road graphs and marks gaps and uncertain motion. It does not read
+reference routes. See [report/preprocessing.md](report/preprocessing.md) for the
+policy and measured results. Summary tables are saved in `results/preprocessing/`;
+optional reproducible caches in `data/processed/` are excluded from Git.
+
+The reusable entry points are `src.data_loader.load_trip`,
+`src.preprocessing.preprocess_trip` and `src.preprocessing.load_preprocessed_trip`.
+For example, after installing the requirements:
+
+```python
+from pathlib import Path
+from src.data_loader import load_trip
+from src.preprocessing import preprocess_trip
+
+trip = preprocess_trip(load_trip(Path("data/Student folder/train/00000001"), "train"))
+print(trip.observations.head())
+```
+

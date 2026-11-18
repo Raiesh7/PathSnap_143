@@ -11,4 +11,5 @@ results/*.csv
 results/*.json
 maps/*.html
 .audit_deps/
+data/processed/
 

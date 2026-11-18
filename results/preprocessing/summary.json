@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "config": {
+    "gap_seconds": 5.0,
+    "speed_flag_mps": 55.0,
+    "zero_length_tolerance_m": 1e-06,
+    "heading_min_distance_m": 1.0,
+    "projection_review_radius_m": 250000.0
+  },
+  "partitions": {
+    "student_test": {
+      "trips": 10,
+      "observation_count": 19160,
+      "invalid_observations": 0,
+      "sequence_count": 54,
+      "gap_count": 44,
+      "speed_flags": 4,
+      "zero_length_arcs": 6,
+      "duplicate_connections": 128,
+      "nonpositive_time_steps": 0,
+      "duplicate_observations": 0
+    },
+    "train": {
+      "trips": 80,
+      "observation_count": 208417,
+      "invalid_observations": 0,
+      "sequence_count": 1296,
+      "gap_count": 1216,
+      "speed_flags": 989,
+      "zero_length_arcs": 100,
+      "duplicate_connections": 1775,
+      "nonpositive_time_steps": 0,
+      "duplicate_observations": 0
+    }
+  },
+  "failures": [],
+  "reference_used": false,
+  "cache_written": true,
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.1",
+    "scipy": "1.16.1",
+    "pyproj": "3.8.0"
+  },
+  "implementation_sha256": {
+    "src/config.py": "77519ce9a60fc4ffbd5aac60a828235d7d1edaa53706376cacd1796e2f8b1049",
+    "src/data_loader.py": "af58268db6270d5573585960a808eeca304fd90a8b056ecf0e11b423e3a31955",
+    "src/preprocessing.py": "52141f98e3fa3a67a2c22b10cace04d1b753103fd9ceb76fa5ed3f9ace1838df",
+    "experiments/01b_preprocess_dataset.py": "d8343957871ffbb25386700c4aca17ab3dc61aaf68110e9f4e813b25662731da"
+  }
+}
