@@ -11,6 +11,10 @@ optimisation, decoder and deployment results when those stages are complete.
 The implemented preprocessing rules, output schema, validation evidence and
 measured effects are documented in [preprocessing.md](preprocessing.md).
 
+All 21 predictor definitions, calculations, reasons for inclusion, missing-value
+handling and limitations are documented in
+[feature_engineering.md](feature_engineering.md).
+
 The completed 20-trial Bayesian search, selected parameters and measured
 baseline-versus-tuned results are documented in
 [hyperparameter_tuning.md](hyperparameter_tuning.md).

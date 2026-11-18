@@ -59,6 +59,11 @@ trip = preprocess_trip(load_trip(Path("data/Student folder/train/00000001"), "tr
 print(trip.observations.head())
 ```
 
+## Feature engineering
+
+The 21 candidate predictors and their rationale are documented in
+[report/feature_engineering.md](report/feature_engineering.md).
+
 ## LightGBM Bayesian hyperparameter tuning
 
 After the candidate tables and shared five-fold assignment have been generated:
