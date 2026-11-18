@@ -1,0 +1,23 @@
+{
+  "config": {
+    "radius_m": 50.0,
+    "max_candidates": 8,
+    "sample_spacing_m": 10.0
+  },
+  "student_test": {
+    "trips": 10,
+    "observations": 19160,
+    "candidate_rows": 113648,
+    "label_valid_obs": 19133,
+    "label_valid_share": 0.9985908141962422,
+    "candidate_miss_rate_valid": 0.0025087545079182498
+  },
+  "train": {
+    "trips": 80,
+    "observations": 208417,
+    "candidate_rows": 1084909,
+    "label_valid_obs": 185149,
+    "label_valid_share": 0.8883584352524027,
+    "candidate_miss_rate_valid": 0.008436448482033381
+  }
+}

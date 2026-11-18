@@ -37,15 +37,15 @@
   "reference_used": false,
   "cache_written": true,
   "versions": {
-    "numpy": "2.2.6",
-    "pandas": "2.3.1",
-    "scipy": "1.16.1",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
     "pyproj": "3.8.0"
   },
   "implementation_sha256": {
-    "src/config.py": "77519ce9a60fc4ffbd5aac60a828235d7d1edaa53706376cacd1796e2f8b1049",
-    "src/data_loader.py": "af58268db6270d5573585960a808eeca304fd90a8b056ecf0e11b423e3a31955",
-    "src/preprocessing.py": "52141f98e3fa3a67a2c22b10cace04d1b753103fd9ceb76fa5ed3f9ace1838df",
+    "src/config.py": "916e665493e433cfe43df651fccd2beb1d928fab6fae9b536d68ec1c9a9cab85",
+    "src/data_loader.py": "fc9e33a15777bb527b09cf0817193320d765006424f421746e54b6c6046d63d0",
+    "src/preprocessing.py": "949824563a6671cb84999cfe9058cf276601752f622d6bf06ad6a4a1add971ff",
     "experiments/01b_preprocess_dataset.py": "d8343957871ffbb25386700c4aca17ab3dc61aaf68110e9f4e813b25662731da"
   }
 }
