@@ -1,0 +1,2 @@
+# Preserve raw file bytes and SHA-256 hashes across Windows and Unix checkouts.
+"data/Student folder/**" -text

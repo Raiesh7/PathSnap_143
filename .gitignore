@@ -5,10 +5,10 @@ venv/
 .env
 .ipynb_checkpoints/
 
-data/Student folder/
 artifacts/*.joblib
 artifacts/*.pkl
 results/*.csv
 results/*.json
 maps/*.html
+.audit_deps/
 
